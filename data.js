@@ -44,5 +44,9 @@ module.exports = {
         count: 13
       }
     }
-  ]
+  ],
+  about:
+    `something about this blog. something about this blog.
+    something about this blog. something about this blog.
+    something about this blog. something about this blog`
 };
