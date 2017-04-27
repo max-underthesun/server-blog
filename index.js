@@ -16,7 +16,6 @@ application.get('/', function(req, res) {
 });
 application.get('/posts/:id', function(req, res) {
   var id = req.params.id;
-  // var item = find(items, function(item) { return item.id == id; });
   res.json(findItem(id));
 });
 application.get('/about', function(req, res) {
@@ -26,17 +25,11 @@ application.get('/about', function(req, res) {
 
 application.post('/posts/:id/like', function(req, res) {
   var id = req.params.id;
-
   var item = findItem(id);
   var count = ++item.meta.count;
 
-  // res.json(item);
   res.json({ id, count });
 });
-
-// application.post('/', function (req, res) {
-//   res.send('POST request to the homepage');
-// });
 
 application.listen(3001, function() {
   console.log('Server on 3001');
