@@ -15,7 +15,8 @@ application.get('/', function(req, res) {
   res.json(items);
 });
 application.get('/posts/:id', function(req, res) {
-  var id = req.params.id;
+  // var id = req.params.id;
+  var id = req.query.id;
   res.json(findItem(id));
 });
 application.get('/about', function(req, res) {
