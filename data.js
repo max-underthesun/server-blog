@@ -2,7 +2,7 @@ module.exports = {
   items: [
     {
       id: 1,
-      image: { src: '/dist/images/img1-lg.jpg' },
+      image: { src: '/images/img1-lg.jpg' },
       title: 'First title',
       text: {
         post:
@@ -20,7 +20,7 @@ module.exports = {
     {
       id: 2,
       image: {
-        src: '/dist/images/img6-lg.jpg',
+        src: '/images/img6-lg.jpg',
         width: '300px',
         height: '240px'
       },
