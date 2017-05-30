@@ -12,12 +12,28 @@ var findItem = function(id) {
 
 application.use(cors());
 application.get('/', function(req, res) {
-  res.json(items);
+  setTimeout(
+    function() {
+      return  res.json(items);
+    },
+    2000
+  );
+
+  // res.json(items);
+  // res.status(500).send('something blew up');
 });
 application.get('/posts/:id', function(req, res) {
+  setTimeout(
+    function() {
+      var id = req.query.id;
+      return res.json(findItem(id));
+    },
+    2000
+  );
   // var id = req.params.id;
-  var id = req.query.id;
-  res.json(findItem(id));
+
+  // var id = req.query.id;
+  // res.json(findItem(id));
 });
 application.get('/about', function(req, res) {
   res.json(about);
