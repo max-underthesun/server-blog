@@ -16,7 +16,7 @@ application.get('/', function(req, res) {
     function() {
       return  res.json(items);
     },
-    2000
+    1000
   );
 
   // res.json(items);
@@ -28,7 +28,7 @@ application.get('/posts/:id', function(req, res) {
       var id = req.query.id;
       return res.json(findItem(id));
     },
-    2000
+    1000
   );
   // var id = req.params.id;
 
